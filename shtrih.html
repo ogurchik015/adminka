@@ -15,16 +15,13 @@
       }
     </style>
     <div class="box"> 
-      <h1>Недовложение, брак отправления</h1>
+      <h1>Создание штрих-кода</h1>
       <div class="d-grid gap-2">
     <a class="btn btn-dark" href="https://ogurchik015.github.io/adminka/" role="button">Вернуться в меню</a>
     </div>
     </div><br>
     <div class="box" style="">
-      Если обнаружен пустой пакет/коробка при приемки:<br>
-      <br>
-       Если на заводской упаковке (коробке, пакете) есть плёнка/слюда/пломба любого вида и для проверки необходимо снять эту плёнку или вскрыть/отклеить пломбу, то клиент может вскрыть упаковку для проверки.<br> <br><b style="color: red">⚠Еара с повреждённой упаковкой при получении. Обязательно выберите для такого товара корректную причину аннуляции.</b><br><br><br>
-
+      <br><b>⚠Советую тчательно проверять номер, который ввели ниже.
       <script>
         function button_id(){
           document.write('text <br> text');
@@ -46,15 +43,31 @@
   div.innerHTML = '<div id="myPicture" style="text-align: center;"><img alt="Aspose Barcode" src="https://products.aspose.app/barcode/embed/image.Png?BarcodeType=Code128&Content=ii29392939&Height=127&Width=300" /></div>';
 
   document.body.append(div);
+
+
   const urlParams = new URLSearchParams(window.location.search);
-const myParam = urlParams.get('UTM_SOURCE');
+const myParam = urlParams.get('code');
 console.log(myParam);
+
+
+function update_href(id, value){
+    id.forEach(function(item) {
+      let a = document.getElementById(item);
+      a.href = a.dataset.link + value;
+    });
+}
+
 </script>
       
-<button id="button_id" onclick="button_id()">Замени тег</button>
+<div style="text-align: center">
+   <br>
+   <input type="text" placeholder="Введи номер отправления/тарника/коробки" oninput="update_href(['link','link_2'], this.value );" size=30 style="width: 300px;">
+   <br><br>
+   <a href="https://ogurchik015.github.io/adminka/shtrih.html/" data-link="https://ogurchik015.github.io/adminka/shtrih.html?code=" id="link">Создать штрих-код</a><br>
+</div>
 
 
-      <br><br>Удачной смены, надеюсь вы все поняли :)<br><br>
+      <br><br>Ваш штрих-код будет в низу сайта, после ввода номера<br><br>
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
 <path fill="#29b6f6" d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"></path><path fill="#fff" d="M34,15l-3.7,19.1c0,0-0.2,0.9-1.2,0.9c-0.6,0-0.9-0.3-0.9-0.3L20,28l-4-2l-5.1-1.4c0,0-0.9-0.3-0.9-1  c0-0.6,0.9-0.9,0.9-0.9l21.3-8.5c0,0,0.7-0.2,1.1-0.2c0.3,0,0.6,0.1,0.6,0.5C34,14.8,34,15,34,15z"></path><path fill="#b0bec5" d="M23,30.5l-3.4,3.4c0,0-0.1,0.1-0.3,0.1c-0.1,0-0.1,0-0.2,0l1-6L23,30.5z"></path><path fill="#cfd8dc" d="M29.9,18.2c-0.2-0.2-0.5-0.3-0.7-0.1L16,26c0,0,2.1,5.9,2.4,6.9c0.3,1,0.6,1,0.6,1l1-6l9.8-9.1  C30,18.7,30.1,18.4,29.9,18.2z"></path>
 </svg><span class="badge bg-secondary">@ogurchik_ins</span><br><br><br><br><br>
