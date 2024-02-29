@@ -21,7 +21,7 @@
     </div>
     </div><br>
     <div class="box" style="">
-      <br><b>⚠Советую тчательно проверять номер, который ввели ниже.
+      <br><b>⚠Советую тчательно проверять номер, который ввели ниже.</b>
       <script>
         function button_id(){
           document.write('text <br> text');
@@ -38,13 +38,6 @@
 </style>
 
 <script>
-  let div = document.createElement('div');
-  div.className = "alert";
-  div.innerHTML = '<div id="myPicture" style="text-align: center;"><img alt="Aspose Barcode" src="https://products.aspose.app/barcode/embed/image.Png?BarcodeType=Code128&Content=ii29392939&Height=127&Width=300" /></div>';
-
-  document.body.append(div);
-
-
   const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get('code');
 console.log(myParam);
@@ -56,7 +49,11 @@ function update_href(id, value){
       a.href = a.dataset.link + value;
     });
 }
+ let div = document.createElement('div');
+  div.className = "alert";
+  div.innerHTML = `<div id="myPicture" style="text-align: center;"><img alt="Aspose Barcode" src="https://products.aspose.app/barcode/embed/image.Png?BarcodeType=Code128&Content=${myParam}&Height=127&Width=300" /></div>`;
 
+  document.body.append(div);
 </script>
       
 <div style="text-align: center">
